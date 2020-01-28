@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Demande} from '../_webservices/demande.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  demandes: Demande[] = [];
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  search() {
+
   }
 
 }

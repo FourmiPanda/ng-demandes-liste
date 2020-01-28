@@ -14,7 +14,7 @@ export class DemandeService {
    * Retourne les demandes
    */
   getDemandes(criteria, page): Observable<Demande[]> {
-    let url = environment.api.url + '/mission?';
+    let url = environment.api.back.url + '/mission?';
     if (criteria.start_date) {
       url += '&start_date=' + criteria.start_date;
     }
@@ -34,7 +34,7 @@ export class DemandeService {
   }
 }
 
-export class Demande {
+export interface Demande {
   id: string;
   texte: string;
   date: string;
