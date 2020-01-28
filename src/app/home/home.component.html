@@ -98,14 +98,9 @@
         </form>
       </div>
       <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Demande n°1234</h5>
-            <small>3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-            blandit.</p>
-          <small>Donec id elit non mi porta.</small>
+        <a href="#" *ngFor="let d of demandes"
+           class="list-group-item list-group-item-action flex-column align-items-start">
+          <app-demande-details [demande]="d"></app-demande-details>
         </a>
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
@@ -133,26 +128,6 @@
     <header>
       <h2>Get in touch</h2>
     </header>
-    <div class="content">
-      <p><strong>Auctor commodo</strong> interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-        venenatis dolor imperdiet dolor mattis sagittis.</p>
-      <form>
-        <div class="fields">
-          <div class="field half">
-            <input type="text" name="name" id="name" placeholder="Name"/>
-          </div>
-          <div class="field half">
-            <input type="email" name="email" id="email" placeholder="Email"/>
-          </div>
-          <div class="field">
-            <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
-          </div>
-        </div>
-        <ul class="actions">
-          <li><input type="submit" value="Send Message" class="button primary"/></li>
-        </ul>
-      </form>
-    </div>
     <footer>
       <ul class="items">
         <li>

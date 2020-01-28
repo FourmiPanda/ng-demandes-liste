@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Demande} from '../_webservices/demande.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +7,9 @@ import {Demande} from '../_webservices/demande.service';
 })
 export class HomeComponent implements OnInit {
 
-  demandes: Demande[] = [];
+  demandes = [{
+    test: 'test'
+  }];
 
   constructor() {
   }

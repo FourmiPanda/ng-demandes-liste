@@ -1125,3 +1125,7 @@ legend {
     margin-bottom: 20px;
   }
 }
+
+.list-group > a :hover {
+
+}
