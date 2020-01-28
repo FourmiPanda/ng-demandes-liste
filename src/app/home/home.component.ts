@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Demande, DemandeService} from '../_webservices/demande.service';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +8,24 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  demandes = [{
-    test: 'test'
-  }];
+  keyword = '';
+  demandes: Demande[] = [];
 
-  constructor() {
+  constructor(private demandeService: DemandeService) {
   }
 
   ngOnInit() {
   }
 
   search() {
-
+    this.demandeService.getDemandes({
+      keyword: this.keyword
+    }, {}).subscribe((res) => {
+      this.demandes = res;
+    }, (err) => {
+      // silent handle
+      // console.error(err);
+    });
   }
 
 }

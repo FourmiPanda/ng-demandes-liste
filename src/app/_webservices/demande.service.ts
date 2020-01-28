@@ -14,7 +14,7 @@ export class DemandeService {
    * Retourne les demandes
    */
   getDemandes(criteria, page): Observable<Demande[]> {
-    let url = environment.api.back.url + '/mission?';
+    let url = environment.api.back.url + '/demandes-backoffice?';
     if (criteria.start_date) {
       url += '&start_date=' + criteria.start_date;
     }

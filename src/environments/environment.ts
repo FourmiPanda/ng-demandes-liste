@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   api: {
     back: {
-      url: 'http://imta.49b88b1b31b54bc0a3b6.westeurope.aksapp.io/demandes-backoffice/api'
+      url: 'http://ubs.2606d3f5f8e140948fc8.westeurope.aksapp.io'
     },
     settings: {
       url: 'http://imta.49b88b1b31b54bc0a3b6.westeurope.aksapp.io/parametrage/api'

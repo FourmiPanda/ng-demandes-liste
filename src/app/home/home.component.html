@@ -5,7 +5,6 @@
   <section class="intro">
     <header>
       <h1> {{ 'home.title' | translate }}</h1>
-      <p>Indépendamment de la convergence des expertises, le marché exige d'optimiser les contenus crédibilité.</p>
       <ul class="actions">
         <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
       </ul>
@@ -16,7 +15,7 @@
           <div class="inner-form">
             <div class="basic-search">
               <div class="input-field">
-                <input id="search" type="text" placeholder="🔍 Search..."/>
+                <input id="search" type="text" name="keyword" [(ngModel)]="keyword" placeholder="🔍 Search..."/>
                 <div class="result-count">
                   <span>{{demandes.length}} </span>results
                 </div>
@@ -97,28 +96,10 @@
           </div>
         </form>
       </div>
-      <div class="list-group">
+      <div class="list-group" style="overflow: auto; height: 500px">
         <a href="#" *ngFor="let d of demandes"
            class="list-group-item list-group-item-action flex-column align-items-start">
           <app-demande-details [demande]="d"></app-demande-details>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Demande n°5678</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-            blandit.</p>
-          <small class="text-muted">Donec id elit non mi porta.</small>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Demande n°91011</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-            blandit.</p>
-          <small class="text-muted">Donec id elit non mi porta.</small>
         </a>
       </div>
     </div>
