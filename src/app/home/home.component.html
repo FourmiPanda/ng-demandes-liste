@@ -10,91 +10,122 @@
         <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
       </ul>
     </header>
-    <div class="content d-flex align-items-center">
-      <form>
-        <div class="inner-form">
-          <div class="basic-search">
-            <div class="input-field">
-              <input id="search" type="text" placeholder="🔍 Search..."/>
-              <div class="result-count">
-                <span>{{demandes.length}} </span>results
+    <div class="content" style="padding-top: 15px;">
+      <div style="padding-bottom: 65px;">
+        <form>
+          <div class="inner-form">
+            <div class="basic-search">
+              <div class="input-field">
+                <input id="search" type="text" placeholder="🔍 Search..."/>
+                <div class="result-count">
+                  <span>{{demandes.length}} </span>results
+                </div>
+              </div>
+            </div>
+            <div class="advance-search">
+              <span class="desc">Advanced Search</span>
+              <div class="row">
+                <div class="input-field">
+                  <div class="input-select">
+                    <select data-trigger="" name="choices-single-defaul">
+                      <option placeholder="" value="">ACCESSORIES</option>
+                      <option>ACCESSORIES</option>
+                      <option>SUBJECT B</option>
+                      <option>SUBJECT C</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-field">
+                  <div class="input-select">
+                    <select data-trigger="" name="choices-single-defaul">
+                      <option placeholder="" value="">COLOR</option>
+                      <option>GREEN</option>
+                      <option>SUBJECT B</option>
+                      <option>SUBJECT C</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-field">
+                  <div class="input-select">
+                    <select data-trigger="" name="choices-single-defaul">
+                      <option placeholder="" value="">SIZE</option>
+                      <option>SIZE</option>
+                      <option>SUBJECT B</option>
+                      <option>SUBJECT C</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row second">
+                <div class="input-field">
+                  <div class="input-select">
+                    <select data-trigger="" name="choices-single-defaul">
+                      <option placeholder="" value="">SALE</option>
+                      <option>SALE</option>
+                      <option>SUBJECT B</option>
+                      <option>SUBJECT C</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-field">
+                  <div class="input-select">
+                    <select data-trigger="" name="choices-single-defaul">
+                      <option placeholder="" value="">TIME</option>
+                      <option>THIS WEEK</option>
+                      <option>SUBJECT B</option>
+                      <option>SUBJECT C</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-field">
+                  <div class="input-select">
+                    <select data-trigger="" name="choices-single-defaul">
+                      <option placeholder="" value="">TYPE</option>
+                      <option>TYPE</option>
+                      <option>SUBJECT B</option>
+                      <option>SUBJECT C</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row third" style="float: right">
+                <div class="input-field">
+                  <button class="btn-search" type="submit" (click)="search()">Search</button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="advance-search">
-            <span class="desc">Advanced Search</span>
-            <div class="row">
-              <div class="input-field">
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">ACCESSORIES</option>
-                    <option>ACCESSORIES</option>
-                    <option>SUBJECT B</option>
-                    <option>SUBJECT C</option>
-                  </select>
-                </div>
-              </div>
-              <div class="input-field">
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">COLOR</option>
-                    <option>GREEN</option>
-                    <option>SUBJECT B</option>
-                    <option>SUBJECT C</option>
-                  </select>
-                </div>
-              </div>
-              <div class="input-field">
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">SIZE</option>
-                    <option>SIZE</option>
-                    <option>SUBJECT B</option>
-                    <option>SUBJECT C</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row second">
-              <div class="input-field">
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">SALE</option>
-                    <option>SALE</option>
-                    <option>SUBJECT B</option>
-                    <option>SUBJECT C</option>
-                  </select>
-                </div>
-              </div>
-              <div class="input-field">
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">TIME</option>
-                    <option>THIS WEEK</option>
-                    <option>SUBJECT B</option>
-                    <option>SUBJECT C</option>
-                  </select>
-                </div>
-              </div>
-              <div class="input-field">
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">TYPE</option>
-                    <option>TYPE</option>
-                    <option>SUBJECT B</option>
-                    <option>SUBJECT C</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row third" style="float: right">
-              <div class="input-field">
-                <button class="btn-search" type="submit" (click)="search()">Search</button>
-              </div>
-            </div>
+        </form>
+      </div>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Demande n°1234</h5>
+            <small>3 days ago</small>
           </div>
-        </div>
-      </form>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
+            blandit.</p>
+          <small>Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Demande n°5678</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
+            blandit.</p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Demande n°91011</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
+            blandit.</p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+      </div>
     </div>
   </section>
 
