@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng-demandes-liste';
 
-  constructor(){
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
   }
 }
