@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   keyword = '';
   demandes: Demande[] = [];
+  hideSpinner = true;
 
   constructor(private demandeService: DemandeService) {
   }

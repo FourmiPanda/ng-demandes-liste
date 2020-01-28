@@ -96,6 +96,7 @@
           </div>
         </form>
       </div>
+      <div [class.hide]="hideSpinner" ><mat-spinner></mat-spinner></div>
       <div class="list-group" style="overflow: auto; height: 500px">
         <a href="#" *ngFor="let d of demandes"
            class="list-group-item list-group-item-action flex-column align-items-start">
